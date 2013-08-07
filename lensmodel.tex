@@ -1,0 +1,137 @@
+%-------- DOCUMENT CLASS ------------
+\documentclass[12pt]{emulateapj}
+
+%-------- Packages ------------
+%\usepackage[iop]{emulateapj}
+\usepackage{amsmath,amssymb,natbib,graphicx}
+\usepackage[usenames]{color}
+\definecolor{Red}{rgb}{1.00,0.00,0.00}
+\usepackage[colorlinks,urlcolor=blue,citecolor=black,linkcolor=blue]{hyperref} % for yahapj biblio links
+%\pdfoutput=1                  % For the PDF latex compiler
+
+% For US letter size
+\special{papersize=8.5in,11in}
+\setlength{\pdfpageheight}{\paperheight}
+\setlength{\pdfpagewidth}{\paperwidth}
+
+
+%-------- MACROS ------------
+
+%\setlength{\topmargin}{0.7in} % uncomment when compiling on macbeth
+
+%-------- TITLE COMMENT ------------
+
+ %% You can insert a short comment on the title page using the command below.
+%\slugcomment{ }
+ 
+%-------- SHORT TITLE  ---------------------
+ 
+%\shorttitle{}
+%\shortauthors{}
+ 
+%-------- BEGIN DOC  ---------------------
+ 
+ \begin{document}
+  
+%-------- TITLE  ---------------------
+
+ \title{On Measuring Inner Halo Profiles with Weak Lensing Shear and Magnification}
+
+%-------- AUTHORS  ---------------------
+
+ %% Use \author, \affil, and the \and command to format
+ %% author and affiliation information.
+ %% Note that \email has replaced the old \authoremail command
+ %% from AASTeX v4.0. You can use \email to mark an email address
+ %% anywhere in the paper, not just in the front matter.
+ %% As in the title, use \\ to force line breaks.
+
+\author{Matthew R. George}
+\affil{Department of Astronomy, University of California, Berkeley, CA
+  94720, USA}
+\affil{Lawrence Berkeley National Laboratory, 1 Cyclotron Road,
+  Berkeley, CA 94720, USA}
+\email{mgeorge@astro.berkeley.edu}
+
+%\submitted{Submitted to ApJ}
+
+%-------- ABSTRACT  ---------------------
+  
+\begin{abstract}
+\end{abstract}
+ 
+%-------- KEY WORDS  ---------------------
+
+%\keywords{}
+
+%--------------------------------------------------------------
+% INTRODUCTION
+%--------------------------------------------------------------
+
+\section{Introduction}
+
+We want to measure the shape of the dark matter profile on small
+scales. This will tell us how baryons have affected the dark matter
+distribution, the assembly history of the baryons and dark matter as
+well as feedback processes, and whether dark matter interacts to form
+``cored'' profiles as opposed to the ``cuspy'' profiles seen in cold
+dark matter simulations. Measurements of the mass distribution on
+scales comparable to the effective radius of a galaxy can also
+constrain the mass-to-light ratio of the stellar population which is
+uncertain by a factor of $\sim2$ depending on the initial mass
+function which is generally assumed.
+
+Various observational probes have been used to constrain the mass
+profile of galaxies and dark matter halos, typically with dynamical
+measurements within a few kpc of the galaxy center, stong lensing arcs
+a bit farther out, and weak lensing on larger scales to measure the
+total mass of the halo \citet{Sand2004, Newman2013a, Auger, Bolton, Schulz2010}.
+While central velocity dispersions or rotation curves can be measured
+for large samples of galaxies, detailed kinematic measures on scales
+$\gtrsim10$~kpc are difficult and strong lenses exist in only a sparse
+sample of the galaxy population. Weak lensing, on the other hand, can
+probe the average profile for large samples of galaxies, allowing
+studies of population differences and redshift evolution. For
+instance, the assembly histories of disk and elliptical galaxies may
+differ and hydrodynamical simulations predict significant differences
+in the inner profiles of their dark matter halos. 
+The aim of this letter is to investigate how well weak lensing shear
+and magnification can constrain the inner mass profile of dark matter
+halos and galaxies.
+ 
+Magnification and shear represent different components of the
+lensing distortion matrix. [EQ] They are related to different aspects of
+the surface mass density profile. [EQ]
+
+Several authors have studied the complementarity of shear and
+magnification, primarily for measuring halo masses
+\citep{Bartelmann1996, Bridle1998, Schneider2000, vanWaerbeke2010b,
+  Rozo2010, Umetsu2011} or probing the matter distribution on
+cosmological scales \citep{vanWaerbeke2010a, Casaponsa2013,
+  Duncan2013, Krause2013}. Combining shear and magnification increases
+the statistical precision of a lensing experiment and also enables
+tests of systematic effects which differ between probes.
+
+Magnification can be measured using sizes, fluxes, or by combining the
+two \citep{}. Magnification has recently been measured with
+signal-to-noise approaching that from shear \citep{Hildebrandt2009,
+  Menard2010, Huff2011, Ford2012, Schmidt2012}.
+
+
+
+ %-------------- ACKNOWLEDGMENTS --------------------
+
+\acknowledgments 
+
+\mbox{~} % needed to prevent chopping off the last line above
+%-------------- BIBLIO --------------------------------
+
+%\pagebreak
+
+%\bibliographystyle{yahapj}
+\bibliographystyle{apj}
+\bibliography{lensmodel}
+
+ %----------------------------------------------------
+
+\end{document}
