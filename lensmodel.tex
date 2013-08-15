@@ -117,21 +117,56 @@ ensembles of galaxies \citep{Scranton2005, Hildebrandt2009,
 
 \section{Lens Modeling}
 
-Magnification and shear represent different components of the
-lensing distortion matrix. [EQ] They are related to different aspects of
-the surface mass density profile. [EQ]
+The distortion of galaxy images due to weak lensing can be described
+by a matrix written in terms of the convergence $\kappa$ and shear
+components $\gamma_1, \gamma_2$ \citep[e.g.][]{Bartelmann2001}:
+\begin{equation}
+A = \left( \begin{array}{cc}
+1 - \kappa -\gamma_1 & -\gamma_2 \\
+-\gamma_2 & 1 - \kappa + \gamma_1 \end{array} \right).
+\end{equation}
+From galaxy images, one can measure the magnification 
+$\mu = (\rm{det}\,A)^{-1} = [(1-\kappa)^2 - |\gamma|^2]^{-1} \approx 1+2\kappa$
+and reduced shear $g = \gamma / (1-\kappa) \approx \gamma$, where we have defined the
+complex shear $\gamma=\gamma_1 + i\gamma_2$ and approximations are
+given to first order in the weak limit $|\gamma|,\kappa \ll 1$.
+
+The convergence and tangential component of shear can be related to the
+projected surface mass density $\Sigma$ of the lens via
+\begin{equation}
+\kappa = \frac{\Sigma}{\Sigma_c}; \,\,\, \gamma_t = \frac{\Delta\Sigma}{\Sigma_c}
+\end{equation}
+where the critical surface density $\Sigma_{\rm  c}$ is a function of
+the angular diameter distances between the observer ($O$), lens ($L$),
+and source ($S$),
+\begin{equation}
+\Sigma_{c}=\frac{c^2}{4\pi G}\frac{D_{OS}}{D_{OL}D_{LS}}.
+\end{equation}
+A typical experiment averages measurements of $g_t$ or $\kappa$ in
+bins of radius $R$ around the lens position to constrain its radial
+surface density profile (or stacks many such measurements for an
+ensemble of lenses). Magnification directly probes the surface density
+at a given position $\Sigma(R)$, whereas shear is sensitive to the
+excess surface density interior to the projected radius
+$\Delta\Sigma(R) = \overline{\Sigma}(<R) - \overline{\Sigma}(R)$. This
+difference in scale-dependence is what we hope to exploit by combining
+shear and magnification measurements to constrain inner halo profiles.
+
+We shall assume that $\Sigma$ and $\Delta\Sigma$ can be estimated from
+magnification and shear observables in an unbiased manner down to our
+minimum radius (typically $40~\rm{kpc}$ which is $\sim20\arcsec$ at
+$z_L=0.1$). For discussion of modeling lensing observables into the
+nonlinear regime, see \citet{Menard2003, Takada2003,
+  Mandelbaum2006}. We will also assume these quantities are
+constrained independently; see \citet{Rozo2010} for a treatment of
+their covariance.
+
 
 NFW, gNFW, AC models.
 
 Assumptions: neglect covariance, systematics. Reduced shear? Non-weak
 lensing? Relative S/N of shear vs. magnification. No contraction
 beyond virial radius, extrapolation with NFW.
-
-We assume that the quantity $\Delta\Sigma (\Sigma)$ can be estimated
-from shear (magnification) observables in an unbiased manner even on
-small scales where the weak limit breaks down. For discussion of
-modeling lensing observables into the nonlinear regime, see
-\citet{Menard2003, Takada2003, Mandelbaum2006}.
 
 Plots of rho, sigma, delta sigma.
 
