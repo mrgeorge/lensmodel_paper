@@ -115,6 +115,12 @@ measured with signal-to-noise approaching that from shear for
 ensembles of galaxies \citep{Scranton2005, Hildebrandt2009,
   Menard2010, Huff2011, Ford2012, Schmidt2012}.
 
+THIS PAPER
+
+We define halos within a virial overdensity of $200$ times the
+critical density of the Universe and use physical distances with
+$h=0.7, \Omega_m=0.3, \Omega_\Lambda=0.7$.
+
 \section{Lens Modeling}
 
 The distortion of galaxy images due to weak lensing can be described
@@ -161,20 +167,75 @@ nonlinear regime, see \citet{Menard2003, Takada2003,
 constrained independently; see \citet{Rozo2010} for a treatment of
 their covariance.
 
+We consider parametric models for the three-dimensional density
+profile $\rho(r)$ of the lens galaxy and dark matter halo, which we
+then project into two dimensions for comparison with the lensing
+observables. For the stellar component, we assume a
+\citet{Hernquist1990} profile of the form
+\begin{equation}
+\rho_{\star}(r) = \frac{M_{\star}}{2\pi} \frac{a}{r(r+r_H)^3}
+\label{eq:hernquist}
+\end{equation}
+parametrized by the total stellar mass $M_{\star}$ and scale radius
+$r_H$. If a constant stellar mass-to-light ratio is assumed, the scale
+radius can be measured from the surface brightness profile of the galaxy
+and deprojected to estimate $r_H$. Stellar masses are typically
+estimated by modeling the spectral energy distribution of a galaxy,
+but assumptions in this process lead to significant systematic
+uncertainties, dominated by our ignorance of the stellar initial mass
+function (IMF). We will treat $M_{\rm star}$ as a free parameter to
+see how well lensing can constrain these uncertainties.
 
-NFW, gNFW, AC models.
+Our baseline model for the dark matter halo is the Navarro-Frenk-White
+\citep[NFW, ][]{Navarro1996} profile with parameters for the halo
+mass~$M_{h}$ and concentration~$c$. \citet{Wright2000} give
+projections of this profile to compute $\Sigma_{\rm NFW}$ and
+$\Delta\Sigma_{\rm NFW}$.
 
-Assumptions: neglect covariance, systematics. Reduced shear? Non-weak
-lensing? Relative S/N of shear vs. magnification. No contraction
-beyond virial radius, extrapolation with NFW.
+The NFW model was introduced to describe the form of halos in dark
+matter simulations, but it is known that the baryonic processes
+including cooling and feedback can modify the shape of the dark matter
+profile \citep[e.g.,][]{Blumenthal1986, Gao2004, Gnedin2004,
+  Johansson2009, Abadi2010, Gnedin2011}. Because we lack a good
+physical description of these processes, we consider a variable amount
+of halo contraction or expansion using the model of
+\citet{Dutton2007}. This model assumes the quantity $rM(r)^\nu$ is
+conserved during the formation of a galaxy, with both baryons and dark
+matter initially distributed following an NFW profile, and the baryons
+eventually collapsion into a final distribution which we take to be
+$\rho_{\star}(r)$ from Equation~\ref{eq:hernquist}. The parameter
+$\nu$ controls the amount of contraction, with $\nu=1$ recovering the
+adiabatic contraction (AC) of \citet{Blumenthal1986}, $\nu=0$ giving an
+uncontracted NFW profile, and $\nu<0$ for expansion of the dark matter
+on small scales. Hydrodynamical simulations predict a range of values
+$-0.2\lesssim \nu \lesssim 0.8$ (CHECK?) depending on the details of
+the cooling and feedback models as well as the assembly history of the
+galaxy.
 
-Plots of rho, sigma, delta sigma.
+We note that these modified halo models are typically implemented
+assuming that the mass within the virial radius is conserved, i.e.,
+that there is no contraction at or beyond the virial radius. This boundary condition
+leads to the result that contraction models producing an excess
+mass density near $r \lesssim r_H$ have a mass \textit{deficit} on
+intermediate scales between $\sim r_H$ and the virial radius, and vice
+versa for expansion models. We demonstrate this effect in
+Figure~\ref{fig:compareAC} showing $\rho, \Sigma,$ and $\Delta\Sigma$
+halo profiles with model parameters from the faint
+early-type sample in Table 1 of \citet{Schulz2010}. We compare profiles that have
+undergone expansion ($\nu=-0.2$) or adiabatic contraction to NFW
+profiles with the same initial halo parameters. To compute the
+projected profiles we extrapolate $\rho(r)$ from $1-10$ virial radii
+using the initial NFW profile. The AC model deviates
+by $20\%$ from the corresponding NFW model at scales of tens of
+kiloparsecs, and the shear and magnification observables have
+different scale-dependence.
 
 % **** FIG *****
 \begin{figure*}[htb]
 \epsscale{1.3}
 \plotone{compareAC}
-\caption{Density profiles for different halo models.}
+\caption{Density profiles for different halo models. [Add stars for
+  comparison, Use correct 2d-3d Rdev.]}
 \label{fig:compareAC}
 \end{figure*}
 % **** FIG *****
@@ -184,6 +245,8 @@ Plots of rho, sigma, delta sigma.
 
 Results. Choice of fiducial system(s) - galaxy vs cluster, concentration, mention
 miscentering.
+
+Relative S/N of shear vs magnification.
 
 Priors
 
