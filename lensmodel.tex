@@ -95,9 +95,12 @@ studies of population differences and redshift evolution, independent
 of their dynamical state. For instance, the assembly histories of disk
 and elliptical galaxies may differ and hydrodynamical simulations
 predict significant differences in the inner profiles of their dark
-matter halos.  The aim of this letter is to investigate how well weak
-lensing shear and magnification can constrain the inner mass profile
-of dark matter halos and galaxies.
+matter halos. Additionally, weak lensing shear and magnification have
+different scale-dependence on the surface mass density profile
+providing added leverage in constraining its shape. The aim of this
+letter is to investigate how well weak lensing shear and magnification
+can constrain the inner mass profile of dark matter halos and
+galaxies.
 
 Several authors have studied the complementarity of shear and
 magnification, primarily for measuring halo masses
@@ -108,11 +111,12 @@ cosmological scales \citep{vanWaerbeke2010a, Casaponsa2013,
 the statistical precision of a lensing experiment and also enables
 tests of systematic effects which differ between probes.
 
-Magnification can be measured using sizes \citep{Bartelmann1995},
-fluxes \citep{Broadhurst1995}, or by combining the two
-\citep{Huff2011, Schmidt2012}. Magnification has recently been
-measured with signal-to-noise approaching that from shear for
-ensembles of galaxies \citep{Scranton2005, Hildebrandt2009,
+While weak lensing experiments traditionally measure galaxy
+ellipticities to infer the shear signal, magnification can be measured
+using sizes \citep{Bartelmann1995}, fluxes \citep{Broadhurst1995}, or
+by combining the two \citep{Huff2011, Schmidt2012}. Magnification has
+recently been measured with signal-to-noise approaching that from
+shear for ensembles of galaxies \citep{Scranton2005, Hildebrandt2009,
   Menard2010, Huff2011, Ford2012, Schmidt2012}.
 
 THIS PAPER
@@ -148,7 +152,7 @@ and source ($S$),
 \begin{equation}
 \Sigma_{c}=\frac{c^2}{4\pi G}\frac{D_{OS}}{D_{OL}D_{LS}}.
 \end{equation}
-A typical experiment averages measurements of $g_t$ or $\kappa$ in
+A typical galaxy lensing experiment averages measurements of $g_t$ or $\kappa$ in
 bins of radius $R$ around the lens position to constrain its radial
 surface density profile (or stacks many such measurements for an
 ensemble of lenses). Magnification directly probes the surface density
@@ -173,17 +177,20 @@ then project into two dimensions for comparison with the lensing
 observables. For the stellar component, we assume a
 \citet{Hernquist1990} profile of the form
 \begin{equation}
-\rho_{\star}(r) = \frac{M_{\star}}{2\pi} \frac{a}{r(r+r_H)^3}
+\rho_{\star}(r) = \frac{M_{\star}}{2\pi} \frac{a}{r(r+r_{\star})^3}
 \label{eq:hernquist}
 \end{equation}
 parametrized by the total stellar mass $M_{\star}$ and scale radius
-$r_H$. If a constant stellar mass-to-light ratio is assumed, the scale
-radius can be measured from the surface brightness profile of the galaxy
-and deprojected to estimate $r_H$. Stellar masses are typically
+$r_{\star}$, which is a good description of elliptical galaxies. If a
+constant stellar mass-to-light ratio is assumed, the 
+projected scale radius $R_{\rm deV}$ measured from fitting a
+de~Vaucouleurs model to the surface brightness profile of the galaxy
+can be converted to the three-dimension Hernquist radius using $R_{\rm
+  deV}=1.8153\,r_{\star}$. Stellar masses are typically
 estimated by modeling the spectral energy distribution of a galaxy,
 but assumptions in this process lead to significant systematic
-uncertainties, dominated by our ignorance of the stellar initial mass
-function (IMF). We will treat $M_{\rm star}$ as a free parameter to
+uncertainties dominated by our ignorance of the stellar initial mass
+function (IMF). We will treat $M_{\star}$ as a free parameter to
 see how well lensing can constrain these uncertainties.
 
 Our baseline model for the dark matter halo is the Navarro-Frenk-White
@@ -202,7 +209,7 @@ of halo contraction or expansion using the model of
 \citet{Dutton2007}. This model assumes the quantity $rM(r)^\nu$ is
 conserved during the formation of a galaxy, with both baryons and dark
 matter initially distributed following an NFW profile, and the baryons
-eventually collapsion into a final distribution which we take to be
+eventually collapsing into a final distribution which we take to be
 $\rho_{\star}(r)$ from Equation~\ref{eq:hernquist}. The parameter
 $\nu$ controls the amount of contraction, with $\nu=1$ recovering the
 adiabatic contraction (AC) of \citet{Blumenthal1986}, $\nu=0$ giving an
@@ -214,10 +221,10 @@ galaxy.
 
 We note that these modified halo models are typically implemented
 assuming that the mass within the virial radius is conserved, i.e.,
-that there is no contraction at or beyond the virial radius. This boundary condition
-leads to the result that contraction models producing an excess
-mass density near $r \lesssim r_H$ have a mass \textit{deficit} on
-intermediate scales between $\sim r_H$ and the virial radius, and vice
+that there is no contraction at or beyond the virial radius. While
+contraction models produce an excess mass density at $r \lesssim
+r_{\star}$, this boundary condition leads to a mass \textit{deficit} on
+intermediate scales between $\sim r_{\star}$ and the virial radius, and vice
 versa for expansion models. We demonstrate this effect in
 Figure~\ref{fig:compareAC} showing $\rho, \Sigma,$ and $\Delta\Sigma$
 halo profiles with model parameters from the faint
@@ -226,9 +233,35 @@ undergone expansion ($\nu=-0.2$) or adiabatic contraction to NFW
 profiles with the same initial halo parameters. To compute the
 projected profiles we extrapolate $\rho(r)$ from $1-10$ virial radii
 using the initial NFW profile. The AC model deviates
-by $20\%$ from the corresponding NFW model at scales of tens of
-kiloparsecs, and the shear and magnification observables have
-different scale-dependence.
+by $\sim25\%$ from the corresponding NFW model at scales of tens of
+kiloparsecs. We also see that the shear and magnification observables have
+different scale-dependence demonstrating their complementarity.
+
+Figure~\ref{fig:compareAC} includes a stellar profile for comparison
+to the halo models. We see that the stars fall off much more rapidly
+than the dark matter and that the transition between excess and
+deficit regions for the AC model relative to NFW occurs at roughly the scale
+where stars and dark matter contribute equally to the total
+profile. In practice, lensing can only measure the sum of the stellar
+and dark matter components but we separate these components in the
+figure to isolate the contraction/expansion effects. 
+
+The contraction model depends on the ratios $M_{\star}/M_h$ and
+$r_{\star}/r_h$, with greater contraction for galaxies that are more
+massive and compact relative to their halos. For a galaxy with
+$M_{\star}=10^{11}~M_{\odot}, R_{\rm deV}=10~{\rm kpc}$ in a
+cluster-scale halo with $M_{h}=10^{15}~M_{\odot}, c=5$, the AC and
+expansion models deviate by less than $5\%$ from the NFW profile at
+$R>10~{\rm kpc}$. The value of $M_{\star}/M_{h}$ peaks near
+$M_{\star}\approx10^{10.5}, M_h\approx10^{12}$
+\citep[e.g.][]{Conroy2009, Behroozi2010, Leauthaud2012}, which
+motivates targeting compact galaxies in this mass range, rather than
+massive clusters or low-mass dwarfs, to measure baryonic contraction
+effects. Additionally, weak lensing measurements are often limited on
+small angular scales due to systematic effects, so a low-redshift lens
+sample allows one to probe smaller physical scales where contraction
+effects are greatest.
+
 
 % **** FIG *****
 \begin{figure*}[htb]
