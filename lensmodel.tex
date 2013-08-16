@@ -88,7 +88,7 @@ total mass of the halo \citep[e.g.,][]{Sand2004, Koopmans2006,
   Gavazzi2007, Jiang2007, Auger2010, Schulz2010, Newman2013a}.  While
 central velocity dispersions or rotation curves can be measured for
 large samples of galaxies, detailed kinematic measures on scales
-$\gtrsim10$~kpc are difficult and strong lenses exist in only a sparse
+$\gtrsim10\,{\rm kpc}$ are difficult and strong lenses exist in only a sparse
 sample of the galaxy population. Weak lensing, on the other hand, can
 probe the average profile for large samples of galaxies, allowing
 studies of population differences and redshift evolution, independent
@@ -164,7 +164,7 @@ shear and magnification measurements to constrain inner halo profiles.
 
 We shall assume that $\Sigma$ and $\Delta\Sigma$ can be estimated from
 magnification and shear observables in an unbiased manner down to our
-minimum radius (typically $40~\rm{kpc}$ which is $\sim20\arcsec$ at
+minimum radius (typically $40\,\rm{kpc}$ which is $\sim20\arcsec$ at
 $z_L=0.1$). For discussion of modeling lensing observables into the
 nonlinear regime, see \citet{Menard2003, Takada2003,
   Mandelbaum2006}. We will also assume these quantities are
@@ -237,7 +237,26 @@ by $\sim25\%$ from the corresponding NFW model at scales of tens of
 kiloparsecs. We also see that the shear and magnification observables have
 different scale-dependence demonstrating their complementarity.
 
-Figure~\ref{fig:compareAC} includes a stellar profile for comparison
+% **** FIG *****
+\begin{figure*}[htb]
+\epsscale{1.3}
+\plotone{compareAC}
+\caption{Density profiles for different halo models showing the
+  effects of baryonic contraction or expansion relative to NFW. A
+  Hernquist profile for the stellar component is included for
+  comparison. Stellar and NFW model parameters are taken from the
+  faint early-type sample in Table 1 of \citet{Schulz2010}: $z=0.11,
+  M_{\star}=7\times10^{10}\,M_{\odot}, M_h=7\times10^{12}\,M_{\odot},
+  c=9, R_{\rm deV}=3.9\,{\rm kpc}$ (physical). The AC model uses
+  $\nu=1$ while the Expansion model has $\nu=-0.2$. The boundary
+  condition specifying no contraction at the virial radius leads to a
+  deficit (excess) in the AC (Expansion) profiles relative to NFW at
+  $R_{\rm deV}\lesssim R\lesssim R_{\rm vir}$.}
+\label{fig:compareAC}
+\end{figure*}
+% **** FIG *****
+
+ Figure~\ref{fig:compareAC} includes a stellar profile for comparison
 to the halo models. We see that the stars fall off much more rapidly
 than the dark matter and that the transition between excess and
 deficit regions for the AC model relative to NFW occurs at roughly the scale
@@ -249,10 +268,10 @@ figure to isolate the contraction/expansion effects.
 The contraction model depends on the ratios $M_{\star}/M_h$ and
 $r_{\star}/r_h$, with greater contraction for galaxies that are more
 massive and compact relative to their halos. For a galaxy with
-$M_{\star}=10^{11}~M_{\odot}, R_{\rm deV}=10~{\rm kpc}$ in a
-cluster-scale halo with $M_{h}=10^{15}~M_{\odot}, c=5$, the AC and
+$M_{\star}=10^{11}\,M_{\odot}, R_{\rm deV}=10\,{\rm kpc}$ in a
+cluster-scale halo with $M_{h}=10^{15}\,M_{\odot}, c=5$, the AC and
 expansion models deviate by less than $5\%$ from the NFW profile at
-$R>10~{\rm kpc}$. The value of $M_{\star}/M_{h}$ peaks near
+$R>10\,{\rm kpc}$. The value of $M_{\star}/M_{h}$ peaks near
 $M_{\star}\approx10^{10.5}, M_h\approx10^{12}$
 \citep[e.g.][]{Conroy2009, Behroozi2010, Leauthaud2012}, which
 motivates targeting compact galaxies in this mass range, rather than
@@ -261,17 +280,6 @@ effects. Additionally, weak lensing measurements are often limited on
 small angular scales due to systematic effects, so a low-redshift lens
 sample allows one to probe smaller physical scales where contraction
 effects are greatest.
-
-
-% **** FIG *****
-\begin{figure*}[htb]
-\epsscale{1.3}
-\plotone{compareAC}
-\caption{Density profiles for different halo models. [Add stars for
-  comparison, Use correct 2d-3d Rdev.]}
-\label{fig:compareAC}
-\end{figure*}
-% **** FIG *****
 
 
 \section{Forecasts}
