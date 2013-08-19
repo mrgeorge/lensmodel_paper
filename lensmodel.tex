@@ -294,28 +294,54 @@ Priors
 Plots of constraints.
 
 
+\begin{deluxetable*}{llccl}
+\tablecaption{Model Parameters}
+\tablehead{ \colhead{Name} & \colhead{Description} & \colhead{Galaxy
+    Value} & \colhead{Cluster Value} & \colhead{Prior}}
+\startdata
+$\log(M_{\star})$ & Stellar mass $(M_{\odot})$ & 10.845 & 12. & Flat[fid$\pm0.5$] \\
+$\log(r_{\star})$ & Hernquist radius $(\rm{kpc})$ & 0.333 & 1. & Fixed \\
+$\log(M_{h})$ & Halo mass $(M_{\odot}, \Delta=200\rho_{c})$ & 12.845 & 13.982 & Flat[fid$\pm0.5$] \\
+$c$ & Halo concentration & 9 & 5.82 & Various \\
+$\nu$ & Contraction level & 0 & 0 & Flat[-0.2, 1.0]
+\enddata
+\label{tab:model}
+\end{deluxetable*}
 
-Table 1: parameters
-Name, Description, Fiducial value gal/cluster, Prior
-M*
-RdeV
-Mh
-c
-nu
---
-Nlens
-Area
-nsource
-shape noise
+\begin{deluxetable}{llcc}
+\tablecaption{Survey Parameters}
+\tablehead{ \colhead{Name} & \colhead{Description} & \colhead{SDSS} & \colhead{LSST}}
+\startdata
+$A_S$ & Survey area $({\rm deg}^2)$ & 9243 & 18000 \\
+$n_l$ & Lens density $({\rm deg}^{-2})$ & $5.26\tablenotemark{a}/0.42\tablenotemark{b}$ & $5.26\tablenotemark{a}/0.42\tablenotemark{b}$\\
+$n_s$ & Source density $({\rm arcmin}^{-2})$ & 1.2 & 37 \\
+$z_l$ & Lens redshift & 0.1 & 0.1 \\
+$z_s$ & Source redshift & 1.0 & 1.0
+\enddata
+\tablenotetext{a}{Galaxies}
+\tablenotetext{b}{Clusters}
+\label{tab:survey}
+\end{deluxetable}
 
-
-Table 2: parameter constraints for the following cases
-M*, Mh, nu, (conc)
-2 x Rmin (20, 40)
-2 x survey (SDSS, LSST - pick shape noise)
-4 x conc (fixed at correct, fixed at +- 1 sigma, free)
-2 x system (galaxy, cluster pars set by M*/Mh, Mh-c, M*-R. Pick lens density!)
-2 x magFrac (0.5, 1.)
+\begin{deluxetable*}{lccccccccc}
+\tablecaption{Parameter Constraints}
+\tablehead{\colhead{} & \multicolumn{4}{c}{Galaxies} & \colhead{} & \multicolumn{4}{c}{Clusters} \\
+\colhead{Description} & \colhead{$\log(M_{\star})$} & \colhead{$\log(M_{h})$} & \colhead{$c$}
+& \colhead{$\nu$} & \colhead{} & \colhead{$\log(M_{\star})$} & \colhead{$\log(M_{h})$} & \colhead{$c$} & \colhead{$\nu$}}
+\startdata
+\cutinhead{SDSS}
+\sidehead{$R_{\rm min}=20\,{\rm kpc}$}
+$c$ fixed, $\sigma_{\Sigma}/\sigma_{\Delta\Sigma}=0.5$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
+$c$ free, $\sigma_{\Sigma}/\sigma_{\Delta\Sigma}=0.5$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
+$c$ fixed, $\sigma_{\Sigma}/\sigma_{\Delta\Sigma}=1$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
+$c$ free, $\sigma_{\Sigma}/\sigma_{\Delta\Sigma}=1$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
+\sidehead{$R_{\rm min}=40\,{\rm kpc}$}
+\cutinhead{LSST}
+\sidehead{$R_{\rm min}=20\,{\rm kpc}$}
+\sidehead{$R_{\rm min}=40\,{\rm kpc}$}
+\enddata
+\label{tab:constraints}
+\end{deluxetable*}
 
 \section{Conclusions}
 
