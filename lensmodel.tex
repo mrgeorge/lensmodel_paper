@@ -147,10 +147,10 @@ projected surface mass density $\Sigma$ of the lens via
 \kappa = \frac{\Sigma}{\Sigma_c}; \,\,\, \gamma_t = \frac{\Delta\Sigma}{\Sigma_c}
 \end{equation}
 where the critical surface density $\Sigma_{\rm  c}$ is a function of
-the angular diameter distances between the observer ($O$), lens ($L$),
-and source ($S$),
+the angular diameter distances between the observer ($o$), lens ($l$),
+and source ($s$),
 \begin{equation}
-\Sigma_{c}=\frac{c^2}{4\pi G}\frac{D_{OS}}{D_{OL}D_{LS}}.
+\Sigma_{c}=\frac{c^2}{4\pi G}\frac{D_{os}}{D_{ol}D_{ls}}.
 \end{equation}
 A typical galaxy lensing experiment averages measurements of $g_t$ or $\kappa$ in
 bins of radius $R$ around the lens position to constrain its radial
@@ -165,7 +165,7 @@ shear and magnification measurements to constrain inner halo profiles.
 We shall assume that $\Sigma$ and $\Delta\Sigma$ can be estimated from
 magnification and shear observables in an unbiased manner down to our
 minimum radius (typically $40\,\rm{kpc}$ which is $\sim20\arcsec$ at
-$z_L=0.1$). For discussion of modeling lensing observables into the
+$z_l=0.1$). For discussion of modeling lensing observables into the
 nonlinear regime, see \citet{Menard2003, Takada2003,
   Mandelbaum2006}. We will also assume these quantities are
 constrained independently; see \citet{Rozo2010} for a treatment of
@@ -227,12 +227,11 @@ r_{\star}$, this boundary condition leads to a mass \textit{deficit} on
 intermediate scales between $\sim r_{\star}$ and the virial radius, and vice
 versa for expansion models. We demonstrate this effect in
 Figure~\ref{fig:compareAC} showing $\rho, \Sigma,$ and $\Delta\Sigma$
-halo profiles with model parameters from the faint
-early-type sample in Table 1 of \citet{Schulz2010}. We compare profiles that have
-undergone expansion ($\nu=-0.2$) or adiabatic contraction to NFW
-profiles with the same initial halo parameters. To compute the
-projected profiles we extrapolate $\rho(r)$ from $1-10$ virial radii
-using the initial NFW profile. The AC model deviates
+halo profiles with model parameters given in Table~\ref{tab:model}. We
+compare the fiducial NFW profile to models with the same initial halo
+parameters that have undergone expansion ($\nu=-0.2$) or adiabatic
+contraction. To compute the projected profiles we extrapolate
+$\rho(r)$ from $1-10$ virial radii using the initial NFW profile. The AC model deviates
 by $\sim25\%$ from the corresponding NFW model at scales of tens of
 kiloparsecs. We also see that the shear and magnification observables have
 different scale-dependence demonstrating their complementarity.
@@ -241,17 +240,15 @@ different scale-dependence demonstrating their complementarity.
 \begin{figure*}[htb]
 \epsscale{1.3}
 \plotone{compareAC}
-\caption{Density profiles for different halo models showing the
+\caption{Density ($\rho(r)$; left), magnification ($\Sigma(R)$;
+  center), and shear ($\Delta\Sigma(R)$; right) profiles for different halo models showing the
   effects of baryonic contraction or expansion relative to NFW. A
   Hernquist profile for the stellar component is included for
-  comparison. Stellar and NFW model parameters are taken from the
-  faint early-type sample in Table 1 of \citet{Schulz2010}: $z=0.11,
-  M_{\star}=7\times10^{10}\,M_{\odot}, M_h=7\times10^{12}\,M_{\odot},
-  c=9, R_{\rm deV}=3.9\,{\rm kpc}$ (physical). The AC model uses
+  comparison. Stellar and NFW model parameters are from Table~\ref{tab:model}. The AC model uses
   $\nu=1$ while the Expansion model has $\nu=-0.2$. The boundary
   condition specifying no contraction at the virial radius leads to a
   deficit (excess) in the AC (Expansion) profiles relative to NFW at
-  $R_{\rm deV}\lesssim R\lesssim R_{\rm vir}$.}
+  $r_{\star}\lesssim r\lesssim r_{\rm vir}$.}
 \label{fig:compareAC}
 \end{figure*}
 % **** FIG *****
@@ -267,7 +264,7 @@ figure to isolate the contraction/expansion effects.
 
 The contraction model depends on the ratios $M_{\star}/M_h$ and
 $r_{\star}/r_h$, with greater contraction for galaxies that are more
-massive and compact relative to their halos. For a galaxy with
+massive and compact relative to their halos. [RERUN TO CHECK THIS] For a galaxy with
 $M_{\star}=10^{11}\,M_{\odot}, R_{\rm deV}=10\,{\rm kpc}$ in a
 cluster-scale halo with $M_{h}=10^{15}\,M_{\odot}, c=5$, the AC and
 expansion models deviate by less than $5\%$ from the NFW profile at
