@@ -152,7 +152,7 @@ and source ($s$),
 \begin{equation}
 \Sigma_{c}=\frac{c^2}{4\pi G}\frac{D_{os}}{D_{ol}D_{ls}}.
 \end{equation}
-A typical galaxy lensing experiment averages measurements of $g_t$ or $\kappa$ in
+A typical galaxy lensing experiment averages measurements of $g_t$ or $\mu$ in
 bins of radius $R$ around the lens position to constrain its radial
 surface density profile (or stacks many such measurements for an
 ensemble of lenses). Magnification directly probes the surface density
@@ -172,9 +172,9 @@ constrained independently; see \citet{Rozo2010} for a treatment of
 their covariance.
 
 We consider parametric models for the three-dimensional density
-profile $\rho(r)$ of the lens galaxy and dark matter halo, which we
-then project into two dimensions for comparison with the lensing
-observables. For the stellar component, we assume a
+profile $\rho(r)$ of the lens galaxy and dark matter halo, which are
+then projected into two dimensions for comparison with the lensing
+observables. The stellar component is modeled as a
 \citet{Hernquist1990} profile of the form
 \begin{equation}
 \rho_{\star}(r) = \frac{M_{\star}}{2\pi} \frac{a}{r(r+r_{\star})^3}
@@ -185,13 +185,13 @@ $r_{\star}$, which is a good description of elliptical galaxies. If a
 constant stellar mass-to-light ratio is assumed, the 
 projected scale radius $R_{\rm deV}$ measured from fitting a
 de~Vaucouleurs model to the surface brightness profile of the galaxy
-can be converted to the three-dimension Hernquist radius using $R_{\rm
+can be converted to the three-dimensional Hernquist radius using $R_{\rm
   deV}=1.8153\,r_{\star}$. Stellar masses are typically
 estimated by modeling the spectral energy distribution of a galaxy,
 but assumptions in this process lead to significant systematic
 uncertainties dominated by our ignorance of the stellar initial mass
 function (IMF). We will treat $M_{\star}$ as a free parameter to
-see how well lensing can constrain these uncertainties.
+determine how well lensing can constrain these uncertainties.
 
 Our baseline model for the dark matter halo is the Navarro-Frenk-White
 \citep[NFW, ][]{Navarro1996} profile with parameters for the halo
@@ -200,7 +200,7 @@ projections of this profile to compute $\Sigma_{\rm NFW}$ and
 $\Delta\Sigma_{\rm NFW}$.
 
 The NFW model was introduced to describe the form of halos in dark
-matter simulations, but it is known that the baryonic processes
+matter simulations, but it is known that baryonic processes
 including cooling and feedback can modify the shape of the dark matter
 profile \citep[e.g.,][]{Blumenthal1986, Gao2004, Gnedin2004,
   Johansson2009, Abadi2010, Gnedin2011}. Because we lack a good
@@ -219,7 +219,7 @@ $-0.2\lesssim \nu \lesssim 0.8$ (CHECK?) depending on the details of
 the cooling and feedback models as well as the assembly history of the
 galaxy.
 
-We note that these modified halo models are typically implemented
+Models of halo contraction are typically implemented
 assuming that the mass within the virial radius is conserved, i.e.,
 that there is no contraction at or beyond the virial radius. While
 contraction models produce an excess mass density at $r \lesssim
@@ -227,11 +227,12 @@ r_{\star}$, this boundary condition leads to a mass \textit{deficit} on
 intermediate scales between $\sim r_{\star}$ and the virial radius, and vice
 versa for expansion models. We demonstrate this effect in
 Figure~\ref{fig:compareAC} showing $\rho, \Sigma,$ and $\Delta\Sigma$
-halo profiles with model parameters given in Table~\ref{tab:model}. We
-compare the fiducial NFW profile to models with the same initial halo
+halo profiles with model parameters given in
+Table~\ref{tab:model}. The fiducial NFW profile is compared to models
+with the same initial halo 
 parameters that have undergone expansion ($\nu=-0.2$) or adiabatic
 contraction. To compute the projected profiles we extrapolate
-$\rho(r)$ from $1-10$ virial radii using the initial NFW profile. The AC model deviates
+$\rho(r)$ beyond the virial radius using the initial NFW profile. The AC model deviates
 by $\sim25\%$ from the corresponding NFW model at scales of tens of
 kiloparsecs. We also see that the shear and magnification observables have
 different scale-dependence demonstrating their complementarity.
@@ -254,8 +255,8 @@ different scale-dependence demonstrating their complementarity.
 % **** FIG *****
 
 Figure~\ref{fig:compareAC} includes a stellar profile for comparison
-to the halo models. We see that the stars fall off much more rapidly
-than the dark matter and that the transition between excess and
+to the halo models. The stars fall off much more rapidly
+than the dark matter and the transition between the excess and
 deficit regions for the AC model relative to NFW occurs at roughly the scale
 where stars and dark matter contribute equally to the total
 profile. In practice, lensing can only measure the sum of the stellar
@@ -264,22 +265,25 @@ figure to isolate the contraction/expansion effects.
 
 The contraction model depends on the ratios $M_{\star}/M_h$ and
 $r_{\star}/r_h$, with greater contraction for galaxies that are more
-massive and compact relative to their halos. [RERUN TO CHECK THIS] For a galaxy with
-$M_{\star}=10^{11}\,M_{\odot}, R_{\rm deV}=10\,{\rm kpc}$ in a
+massive and compact relative to their halos. For a galaxy with
+$M_{\star}=10^{11}\,M_{\odot}, R_{\rm deV}=10\,{\rm kpc}\,
+(r_\star=5.5\,{\rm kpc})$ in a
 cluster-scale halo with $M_{h}=10^{15}\,M_{\odot}, c=5$, the AC and
-expansion models deviate by less than $5\%$ from the NFW profile at
+expansion models deviate by less than $3\%$ from the NFW profile at
 $R>10\,{\rm kpc}$. The value of $M_{\star}/M_{h}$ peaks near
 $M_{\star}\approx10^{10.5}, M_h\approx10^{12}$
 \citep[e.g.][]{Conroy2009, Behroozi2010, Leauthaud2012} which
-motivates targeting compact galaxies in this mass range, rather than
-massive clusters or low-mass dwarfs, to measure baryonic contraction
-effects. Additionally, weak lensing measurements are often limited on
+motivates targeting compact galaxies in this mass range to measure
+baryonic contraction effects, rather than massive clusters or low-mass
+dwarfs. Additionally, weak lensing measurements are often limited on 
 small angular scales due to systematic effects, so a low-redshift lens
 sample allows one to probe smaller physical scales where contraction
 effects are greatest.
 
 
 \section{Forecasts}
+
+
 
 Results. Choice of fiducial system(s) - galaxy vs cluster, concentration, mention
 miscentering.
@@ -323,7 +327,7 @@ $z_s$ & Source redshift & 0.39 & 0.82
 \plotone{fiducial}
 \caption{Magnification ($\Sigma(R)$; left) and shear
   ($\Delta\Sigma(R)$; right) profiles for fiducial galaxy and cluster models with
-  parameters given in Tabel~\ref{tab:model} and error bars predicted
+  parameters given in Table~\ref{tab:model} and error bars predicted
   from the survey parameters in Table~\ref{tab:survey}.}
 \label{fig:fiducial}
 \end{figure*}
