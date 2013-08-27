@@ -385,7 +385,7 @@ approaches to treat miscentering.
 Constraints on model profiles are derived in a Bayesian sense by
 sampling the parameter space to maximize the posterior probability of
 the data given the model and priors. The posterior for a set of model
-parameters ${\bm \lambda}$ given data ${\bm
+parameters ${\bm \lambda}$ given the general data set ${\bm
   d}=\{\Sigma(R),\Delta\Sigma(R)\}$ is defined as 
 \begin{equation}
 \ln P({\bm \lambda}| {\bm d}) \propto
@@ -399,10 +399,13 @@ The right-hand side consists of the prior ${\mathcal P}$ and the likelihood
 &  + \left(\frac{\Delta\Sigma(R_i|{\bm \lambda}) -
       \Delta\Sigma(R_i|{\hat{\bm \lambda}})}{\sigma_{\Delta\Sigma}(R_i)}\right)^2
 \end{split}\end{equation}
-where $\hat{\bm \lambda}$ is the set of input model parameters.
+where $\hat{\bm \lambda}$ is the set of input model parameters. We
+consider shear and magnification constraints separately in addition to
+the combined data set, and remove data from the likelihood calculation
+accordingly.
 
 Sampling is performed using the
-affine invariant Markov chain Monte Carlo algorithm of
+affine invariant Markov chain Monte Carlo (MCMC) algorithm of
 \citet{Goodman2010} implemented in the {\tt emcee} code of
 \citet{Foreman-Mackey2013}. We opt for a Monte Carlo approach rather
 than Fisher information since it is more robust to non-Gaussianity and
@@ -418,8 +421,39 @@ fiducial value, assuming that dark matter simulations can provide
 reliable halo concentrations before any baryonic contraction or
 expansion effects modify the halo.
 
-Results. Plots of constraints.
+Results in Figures~\ref{fig:contours_cfree}
+and~\ref{fig:contours_cfixed} and Table~\ref{tab:constraints}. 
 
+% **** FIG *****
+\begin{figure*}[htb]
+\epsscale{0.9}
+\plotone{contours_alt4par_lsst_40_long.pdf}
+\caption{[PLACEHOLDER: FIDUCIAL PARAMETERS AND PRIORS ARE NOT THE
+  SAME AS TABLE~\ref{tab:model}] Posterior distributions for model
+  parameters from MCMC fit with the fiducial Galaxy model, LSST survey
+  parameters, $R_{\rm min}=40\,{\rm kpc}$, and $\Gamma=0.5(?)$. Contraints are from $\Sigma(R)$ (red),
+  $\Delta\Sigma(R)$ (green), and the combined data (blue). The top
+  column in each panel shows the one-dimensional posterior for each
+  parameter while marginalizing over other parameters, and lower
+  panels show the $68\%$ and $95\%$ contours for the joint posterior
+  for each pair of parameters. $M_{\star}$ and $M_h$ are
+  well-constrained (expect $M_{\star}$ with $\Sigma(R)$ only), while
+  $c$ and $\nu$ are degenerate and unconstrained by the data.}
+\label{fig:contours_cfree}
+\end{figure*}
+% **** FIG *****
+
+% **** FIG *****
+\begin{figure*}[htb]
+\epsscale{0.8}
+\plotone{contours_alt3par_lsst_40_long.pdf}
+\caption{Same as Figure~\ref{fig:contours_cfree} but with $c$ fixed to
+the fiducial value from simulations. If $c$ is known for the dark
+matter halo prior to baryonic contraction or expansion, then $\nu$ can
+be constrained.}
+\label{fig:contours_cfixed}
+\end{figure*}
+% **** FIG *****
 
 \begin{deluxetable*}{lccccccccc}
 \tablecaption{Parameter Constraints}
@@ -429,10 +463,10 @@ Results. Plots of constraints.
 \startdata
 \cutinhead{SDSS}
 \sidehead{$R_{\rm min}=20\,{\rm kpc}$}
-$c$ fixed, $\sigma_{\Sigma}/\sigma_{\Delta\Sigma}=0.5$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
-$c$ free, $\sigma_{\Sigma}/\sigma_{\Delta\Sigma}=0.5$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
-$c$ fixed, $\sigma_{\Sigma}/\sigma_{\Delta\Sigma}=1$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
-$c$ free, $\sigma_{\Sigma}/\sigma_{\Delta\Sigma}=1$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
+$c$ fixed, $\Gamma=0.5$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
+$c$ free, $\Gamma=0.5$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
+$c$ fixed, $\Gamma=1$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
+$c$ free, $\Gamma=1$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
 \sidehead{$R_{\rm min}=40\,{\rm kpc}$}
 \cutinhead{LSST}
 \sidehead{$R_{\rm min}=20\,{\rm kpc}$}
@@ -441,7 +475,23 @@ $c$ free, $\sigma_{\Sigma}/\sigma_{\Delta\Sigma}=1$ & 1 & 2 & 3 & 4 & & 1 & 2 & 
 \label{tab:constraints}
 \end{deluxetable*}
 
-\section{Conclusions}
+\section{Discussion}
+
+[PRELIMINARY DISCUSSION] It
+looks like $M_{\star}$ and $M_h$ can be constrained well, but only one
+of $c$ or $\nu$ can be constrained since they show a significant
+degeneracy. I would argue that $c$ can be reasonably estimated from
+dark matter simulations, so we can fix it to constrain $\nu$, which is
+much less well-understood from hydrodynamical simulations. If the
+\textit{wrong} $c$ is assumed, shear and magnification observables
+give inconsistent constraints on $M_\star$ and $M_h$, which can
+provide a useful test of the assumed $c$.  It is also interesting that
+$M_\star$ can be constrained from lensing alone, which will help
+determine the IMF. Even though we assume a Hernquist profile with a
+fixed stellar mass to light ratio, the stellar component has a much
+steeper profile than even an adiabatically contracted halo profile
+(see Figure~\ref{fig:fiducial}), so moderate uncertainties in the
+slope of the stellar component can be tolerated.
 
 
  %-------------- ACKNOWLEDGMENTS --------------------
