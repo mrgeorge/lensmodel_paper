@@ -126,6 +126,7 @@ critical density of the Universe and use physical distances with
 $h=0.7, \Omega_m=0.3, \Omega_\Lambda=0.7$.
 
 \section{Lens Modeling}
+\label{sec:model}
 
 The distortion of galaxy images due to weak lensing can be described
 by a matrix written in terms of the convergence $\kappa$ and shear
@@ -161,15 +162,6 @@ excess surface density interior to the projected radius
 $\Delta\Sigma(R) = \overline{\Sigma}(<R) - \overline{\Sigma}(R)$. This
 difference in scale-dependence is what we hope to exploit by combining
 shear and magnification measurements to constrain inner halo profiles.
-
-We shall assume that $\Sigma$ and $\Delta\Sigma$ can be estimated from
-magnification and shear observables in an unbiased manner down to our
-minimum radius (typically $40\,\rm{kpc}$ which is $\sim20\arcsec$ at
-$z_l=0.1$). For discussion of modeling lensing observables into the
-nonlinear regime, see \citet{Menard2003, Takada2003,
-  Mandelbaum2006}. We will also assume these quantities are
-constrained independently; see \citet{Rozo2010} for a treatment of
-their covariance.
 
 We consider parametric models for the three-dimensional density
 profile $\rho(r)$ of the lens galaxy and dark matter halo, which are
@@ -283,16 +275,74 @@ effects are greatest.
 
 \section{Forecasts}
 
+To understand how well model halo profiles can be constrained, we need
+to estimate the signal-to-noise (S/N) of the lensing measurement. We
+choose two fiducial galaxy models and two sets of survey parameters
+given in Tables~\ref{tab:model} and~\ref{tab:survey}.  The fiducial
+models are constructed as in Section~\ref{sec:model}, with the total
+signal composed of the sum of an NFW halo and a Hernquist profile for
+the stellar component. For each of the the lens samples which have
+mean stellar masses of $\log(M_{\star}/M_{\odot})=10.5$ (``Galaxies'')
+and $11.5$ (``Clusters''), the halo mass is taken from the mean
+$M_h(M_\star)$ relation derived from abundance matching
+\citep{Behroozi2010} and the concentration is set to the mean $c(M_h)$
+relation from recent dark matter simulations \citep{Klypin2011}. The
+number densities for the lens samples are estimated from a fit to an
+empirical stellar mass function \citep{Li2009} assuming galaxies are
+selected in bins of width $\Delta\log(M_{\star})=0.5\,{\rm dex}$ and
+$\Delta z_l=0.1$. Survey parameters reflect the existing shape catalog
+in SDSS \citep{Reyes2012} and anticipated shear data from LSST
+\citep{Chang2013}.
 
+The measurement uncertainty for shear is assumed to be dominated by
+intrinsic shape noise and is estimated as
+\begin{equation}
+\sigma_{\Delta\Sigma}=\frac{\sigma_{\gamma}\Sigma_c}{\sqrt{n_l A_S n_s
+  \pi(R_2^2-R_1^2)}}
+\end{equation}
+where the denominator is the square root of the number of source-lens
+pairs in the survey and $R_1$ and $R_2$ are the edges of the radial
+bins. For the shape noise, we take
+$\sigma_{\gamma}=0.25$ as the intrinsic scatter in a single component
+of $\gamma$ due to the variety of galaxy ellipticities, noting that this
+value falls between measured values in SDSS \citet{Hirata2004} and
+COSMOS \citet{Leauthaud2007}. The variety of approaches to
+magnification measurements mentioned in the introduction have
+differences in their source selection and in the intrinsic scatter for
+the observable. While these properties differ from shear experiments
+in general, the measurement uncertainty typically 
+has the same scaling with $\Sigma_c, n_l, A_S,$ and $R$. We thus
+parametrize the measurement uncertainty for magnification with 
+\begin{equation}
+\Gamma = \frac{\sigma_{\Delta\Sigma}}{\sigma_{\Sigma}} =
+\frac{\sigma_\gamma}{\sigma_\kappa}\sqrt{\frac{n_{s, \rm{mag}}}{n_{s, \rm{shear}}}},
+\end{equation}
+and use values of $\Gamma=0.5, 1$ to represent current and optimistic
+magnification measurements. The fiducial models are shown in
+Figure~\ref{fig:fiducial} with measurement errors for each survey
+plotted in the range $20-2000\,{\rm kpc}$ with bins of width
+$\Delta\log(R)=0.15$.
 
-Results. Choice of fiducial system(s) - galaxy vs cluster, concentration, mention
-miscentering.
-
-Relative S/N of shear vs magnification.
+We make a number of idealizing assumptions since our goal is to
+illustrate the potential of such measurements and to motivate
+development of methods to deal with small-scale systematics. For
+simplicity, we take a single value for the stellar and halo masses as well as
+the lens and source redshifts, rather than accounting for the full
+distribution of each parameter. We assume that $\Sigma$ and
+$\Delta\Sigma$ can be estimated from magnification and shear
+observables in an unbiased manner down to our minimum radius ($R_{\rm
+  min} = 20$ or $40\,\rm{kpc}$ corresponding to angular scales of
+$\sim10\arcsec, 20\arcsec$ at $z_l=0.1$). For discussion of modeling
+lensing observables into the nonlinear regime, see \citet{Menard2003,
+  Takada2003, Mandelbaum2006}. We will also assume these quantities
+are constrained independently; \citet{Rozo2010} provide a treatment
+of their covariance. Galaxies are assumed to lie at the centers of
+their halos; see e.g., \citet{Johnston2007, George2012} for
+approaches to treat miscentering.
 
 Priors
 
-Plots of constraints.
+Results. Plots of constraints.
 
 
 \begin{deluxetable*}{llccl}
@@ -328,7 +378,9 @@ $z_s$ & Source redshift & 0.39 & 0.82
 \caption{Magnification ($\Sigma(R)$; left) and shear
   ($\Delta\Sigma(R)$; right) profiles for fiducial galaxy and cluster models with
   parameters given in Table~\ref{tab:model} and error bars predicted
-  from the survey parameters in Table~\ref{tab:survey}.}
+  from the survey parameters in Table~\ref{tab:survey}. Errors for
+  both surveys on the cluster sample and for LSST on the galaxy sample
+are similar to the line widths.}
 \label{fig:fiducial}
 \end{figure*}
 % **** FIG *****
