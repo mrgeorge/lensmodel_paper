@@ -80,12 +80,14 @@ constrain the mass-to-light ratio of the stellar population which is
 uncertain by a factor of $\sim2$ depending on the initial mass
 function which is generally assumed.
 
-Earlier baryonic effects on lensing, e.g. Kochanek and White 
+Earlier baryonic effects on lensing, e.g. Kochanek and White
+ 
 SIDM review?
+
 baryonic effects on cosmic shear, White, Rudd et al, Zentner et al.
 
-Add para on small-scale systematics, motivation is to push WL down to
-smaller scales.
+Add para on small-scale systematics, motivation is to see what we
+can learn by pushing WL down to smaller scales.
 
 Various observational probes have been used to constrain the mass
 profile of galaxies and dark matter halos, typically with dynamical
@@ -431,23 +433,21 @@ reliable halo concentrations before any baryonic contraction or
 expansion effects modify the halo.
 
 Results in Figures~\ref{fig:contours_cfree}
-and~\ref{fig:contours_cfixed} and Table~\ref{tab:constraints}. 
+and~\ref{fig:contours_sdss} and Table~\ref{tab:constraints}. 
 
 % **** FIG *****
 \begin{figure*}[htb]
 \epsscale{0.9}
-\plotone{contours_alt4par_lsst_40_long.pdf}
-\caption{[PLACEHOLDER: FIDUCIAL PARAMETERS AND PRIORS ARE NOT THE
-  SAME AS TABLE~\ref{tab:model}] Posterior distributions for model
-  parameters from MCMC fit with the fiducial Galaxy model, LSST survey
-  parameters, $R_{\rm min}=40\,{\rm kpc}$, and $\Gamma=0.5(?)$. Contraints are from $\Sigma(R)$ (red),
+\plotone{contours_lsst_sm115_200_10_cfree}
+\caption{Posterior distributions for model
+  parameters from MCMC fit with the fiducial Cluster model, LSST survey
+  parameters, $R_{\rm min}=20\,{\rm kpc}$, and $\Gamma=1.0$. Contraints are from $\Sigma(R)$ (red),
   $\Delta\Sigma(R)$ (green), and the combined data (blue). The top
   column in each panel shows the arbitrarily normalized one-dimensional posterior for each
   parameter while marginalizing over other parameters, and lower
   panels show the $68\%$ and $95\%$ contours of the joint posterior distribution
-  for each pair of parameters. $M_{\star}$ and $M_h$ are
-  well-constrained (except $M_{\star}$ with $\Sigma(R)$ only), while
-  $c$ and $\nu$ are degenerate and unconstrained by the data.}
+  for each pair of parameters. In this optimistic scenario, all four
+  parameters are constrained by the data.}
 \label{fig:contours_cfree}
 \end{figure*}
 % **** FIG *****
@@ -455,12 +455,9 @@ and~\ref{fig:contours_cfixed} and Table~\ref{tab:constraints}.
 % **** FIG *****
 \begin{figure*}[htb]
 \epsscale{0.8}
-\plotone{contours_alt3par_lsst_40_long.pdf}
-\caption{Same as Figure~\ref{fig:contours_cfree} but with $c$ fixed to
-the fiducial value from simulations. If $c$ is known for the dark
-matter halo prior to baryonic contraction or expansion, then $\nu$ can
-be constrained.}
-\label{fig:contours_cfixed}
+\plotone{contours_sdss_sm115_200_10_cfree}
+\caption{Same as Figure~\ref{fig:contours_cfree} but with SDSS survey parameters.}
+\label{fig:contours_sdss}
 \end{figure*}
 % **** FIG *****
 
@@ -488,7 +485,7 @@ $c$ free, $\Gamma=1$ & 1 & 2 & 3 & 4 & & 1 & 2 & 3 & 4 \\
 
 [PRELIMINARY DISCUSSION] It
 looks like $M_{\star}$ and $M_h$ can be constrained well, but only one
-of $c$ or $\nu$ can be constrained since they show a significant
+of $c$ or $\nu$ can be constrained with lower quality data since they show a significant
 degeneracy. I would argue that $c$ can be reasonably estimated from
 dark matter simulations, so we can fix it to constrain $\nu$, which is
 much less well-understood from hydrodynamical simulations. If the
